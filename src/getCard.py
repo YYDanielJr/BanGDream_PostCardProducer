@@ -56,7 +56,7 @@ def getChineseName(characterId):
     return characerMap[characterId][2]
 
 def getCard(cardId, afterTraining=False):
-
+    os.makedirs("cache/img", exist_ok=True)
     current_work_dir = os.getcwd()
     print(current_work_dir)
     card = Card(cardId)
@@ -65,7 +65,7 @@ def getCard(cardId, afterTraining=False):
     else:
         png = card.get_card(type='normal')
 
-    with open("img/card.png", 'wb') as f:
+    with open("cache/img/card.png", 'wb') as f:
         f.write(png)
 
     all = card.get_info()
@@ -107,13 +107,13 @@ def getCard(cardId, afterTraining=False):
     costume = Costume(costumeId)
     pico = costume.get_icon()
 
-    with open("img/pico.png", 'wb') as f:
+    with open("cache/img/pico.png", 'wb') as f:
         f.write(pico)
 
-    pico_rgba = Image.open("img/pico.png").convert("RGBA")
-    pico_rgba.save("img/pico_rgba.png", "PNG")
+    pico_rgba = Image.open("cache/img/pico.png").convert("RGBA")
+    pico_rgba.save("cache/img/pico_rgba.png", "PNG")
 
-    ret1 = subprocess.run(["realesrgan/realesrgan-ncnn-vulkan", "-i", "img/pico_rgba.png", "-o", "img/pico_rgba_upscale.png", "-n", "realesrgan-x4plus-anime"])
-    ret2 = subprocess.run(["realesrgan/realesrgan-ncnn-vulkan", "-i", "img/card.png", "-o", "img/card_upscale.png", "-n", "realesrgan-x4plus-anime"])
+    ret1 = subprocess.run(["realesrgan/realesrgan-ncnn-vulkan", "-i", "cache/img/pico_rgba.png", "-o", "cache/img/pico_rgba_upscale.png", "-n", "realesrgan-x4plus-anime"])
+    ret2 = subprocess.run(["realesrgan/realesrgan-ncnn-vulkan", "-i", "cache/img/card.png", "-o", "cache/img/card_upscale.png", "-n", "realesrgan-x4plus-anime"])
 
     return cardInfo

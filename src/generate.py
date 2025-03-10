@@ -1,5 +1,4 @@
 from bs4 import BeautifulSoup
-import requests
 
 def generateHtml(cardInfo: dict):
     # 读取前面页的HTML和CSS
@@ -44,7 +43,7 @@ def generateHtml(cardInfo: dict):
         chineseName.append(after_slash)
 
     mainImage = soup.find("img", id="main-card-image")
-    mainImage["src"] = "../img/card_upscale.png"
+    mainImage["src"] = "../cache/img/card_upscale.png"
 
     teamLogo = soup.find("img", class_="team-logo")
     teamLogo["src"] = f"../TeamLogo/{cardInfo['teamName']}.svg"
@@ -82,7 +81,7 @@ def generateHtml(cardInfo: dict):
         note.string = " "
 
     pico = soup.find("img", class_="character-png")
-    pico["src"] = "../img/pico_rgba_upscale.png"
+    pico["src"] = "../cache/img/pico_rgba_upscale.png"
 
     with open("cache/back.html", "w", encoding="utf-8") as f:
         f.write(soup.prettify())
