@@ -52,6 +52,9 @@ characerMap = {
     40: ["椎名 立希", "SHIINA TAKI", "椎名立希", "taki"]
 }
 
+def getChineseName(characterId):
+    return characerMap[characterId][2]
+
 def getCard(cardId, afterTraining=False):
 
     current_work_dir = os.getcwd()
@@ -76,6 +79,7 @@ def getCard(cardId, afterTraining=False):
 
     cardInfo = {
         "character": characerMap[characterId],
+        "characterChineseName": getChineseName(characterId),
         "title": all['prefix'],
         "gachaText": gachaText,
     }

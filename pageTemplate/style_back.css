@@ -1,0 +1,88 @@
+@page {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 296mm;
+    height: 200mm;
+    display: relative;
+    background: rgb(255, 255, 255);
+    /*border: 3px solid #ccc;*/
+}
+
+.image-area {
+    display: flex;
+    gap: 2mm;
+    margin: 10mm;
+}
+.image-box {
+    width: 14mm; /* 图片宽度 */
+    height: 16mm; /* 图片高度 */
+    border: 1px solid #a1a1a1; /* 图片框样式 */
+}
+.stamp {
+    width: 40mm; /* 图章宽度 */
+    height: 50mm; /* 图章高度 */
+    position: absolute;
+    top: 10mm;
+    right: 10mm;
+    border: 1px solid #a8a8a8; /* 图章框样式 */
+}
+
+.line-area {
+    position: absolute;
+    top: 85mm;
+    right: 10mm;
+    width: 55%;
+    margin: 0;
+}
+
+.line-area #line {
+    width: 100%;
+    height: 20mm;
+    border-bottom: 1px solid #b3b3b3;
+    margin: 10px 0;
+}
+
+.line-area #line-short {
+    width: 75%;
+    height: 20mm;
+    border-bottom: 1px solid #b3b3b3;
+    margin: 10px 0;
+}
+
+.note {
+    position: absolute;
+    bottom: 13mm;
+    left: 13mm;
+    width: 30%;    /* 设置固定宽度 */
+    font-family: 'MiSans', sans-serif;
+    font-weight: 250;
+    font-size: 17pt;
+    color: #9c9c9c;
+    text-align: left;   /* 文字靠左对齐 */
+    word-wrap: break-word;  /* 允许长单词断行 */
+    word-break: keep-all;      /* 保持标点符号不换行 */
+    overflow-wrap: break-word; /* 允许在单词内换行 */
+    /*white-space: pre-wrap;     /* 保留空格和换行，允许自动换行 */
+    line-height: 1.65;
+}
+.character {
+    position: absolute;
+    bottom: 5mm;
+    right: 0mm;
+    width: 60mm;
+    height: 60mm;
+}
+
+.character-png {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;  /* 保持图片比例完整显示 */
+}
