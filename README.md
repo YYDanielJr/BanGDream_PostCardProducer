@@ -7,7 +7,7 @@
 建议在conda等虚拟环境下运行程序。<br>
 安装依赖：
 ```
-pip install -r requirements
+pip install -r requirements.txt
 ```
 安装依赖之后，运行main.py即可：
 ```
