@@ -1,6 +1,6 @@
+beautifulsoup4==4.13.3
 bestdori_api==1.1.6
-docx2pdf==0.1.8
 Pillow==11.1.0
 PyPDF2==3.0.1
-spire==0.4.2
-Spire.Doc==13.1.0
+Requests==2.32.3
+selenium==4.29.0

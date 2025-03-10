@@ -1,6 +1,5 @@
 import os
 import src.getCard
-import src.postCardtools
 import src.generate
 import src.html2pdf_selenium
 import src.mergePdf
