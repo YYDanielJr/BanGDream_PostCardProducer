@@ -21,7 +21,7 @@ def main():
         src.html2pdf_selenium.html_to_pdf("cache/back.html", "cache/back.pdf")
 
         os.makedirs("output", exist_ok=True)
-        src.mergePdf.mergePdf("cache/front.pdf", "cache/back.pdf", "output/{}_{}.pdf".format(cardInfo["characterChineseName"], cardId))
+        src.mergePdf.mergePdf("cache/front.pdf", "cache/back.pdf", "output/{}_{}_{}.pdf".format(cardInfo["characterChineseName"], cardId, "after-training" if afterTraining == 'y' else "normal"))
 
         # 清理cache目录
         if os.path.exists("cache"):
