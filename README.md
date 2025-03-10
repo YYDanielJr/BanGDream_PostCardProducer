@@ -30,5 +30,6 @@ python main.py
 - 压缩生成的图片大小，减小pdf尺寸
 
 ## 使用到的第三方库
+- bestdori-api：https://github.com/WindowsSov8forUs/bestdori-api
 - Real-ESRGAN二进制文件：https://github.com/xinntao/Real-ESRGAN-ncnn-vulkan
 - Selenium：https://github.com/SeleniumHQ/selenium
