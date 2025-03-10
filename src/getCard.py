@@ -42,7 +42,7 @@ characerMap = {
     30: ["八潮 瑠唯", "YASHIO RUI", "八潮瑠唯", "rui"],
     31: ["和奏 瑞依/LAYER", "WAKANA REI", "和奏瑞依", "layer"],
     32: ["朝日 六花/LOCK", "ASAHI ROKKA", "朝日六花", "lock"],
-    33: ["佐藤 益木/MASKING", "SATOU MASUKI", "佐藤益木", "masking"],
+    33: ["佐藤 益木/MASKING", "SATŌ MASUKI", "佐藤益木", "masking"],
     34: ["鳰原 令王那/PAREO", "NYUBARA REONA", "鳰原令王那", "pareo"],
     35: ["珠手 知由/CHU²", "TAMADE CHIYU", "珠手知由", "chu²"],
     36: ["高松 灯", "TAKAMATSU TOMORI", "高松灯", "tomori"],
